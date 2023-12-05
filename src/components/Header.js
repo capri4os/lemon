@@ -1,17 +1,18 @@
 import React from "react";
+import logo from "../images/little-lemon-logo.svg";
 
 const Header = () => {
     return (
-        <header>
-            <img class="logo"></img>
-            <nav>
-                <ul>
-                    <li>Home</li>
-                    <li>About</li>
-                    <li>Menu</li>
-                    <li>Reservations</li>
-                    <li>Order online</li>
-                    <li>Login</li>
+        <header className="header container">
+            <nav className="header__menu">
+                <img className="header__logo" src={logo}></img>
+                <ul className="header__menu-list">
+                    <li className="header__menu-list__item">Home</li>
+                    <li className="header__menu-list__item">About</li>
+                    <li className="header__menu-list__item">Menu</li>
+                    <li className="header__menu-list__item">Reservations</li>
+                    <li className="header__menu-list__item">Order online</li>
+                    <li className="header__menu-list__item">Login</li>
                 </ul>
             </nav>
         </header>

@@ -1,13 +1,720 @@
+/* Markazi Text
+Display Title – Medium 64pt
+Sub title – keep close to display Regular 40 pt */
+
+/* Title */
+@font-face {
+  font-family: "Markazi Text";
+  src: url("../src/fonts/markazi-text-medium.woff2") format("woff2"),
+       url("../src/fonts/markazi-text-medium.woff") format("woff"),
+       url("../src/fonts/markazi-text-medium.ttf") format("truetype"); 
+  font-weight: 500;
+  font-style: normal;
+}
+
+/* Sub title */
+@font-face {
+  font-family: "Markazi Text";
+  src: url("../src/fonts/markazi-text-regular.woff2") format("woff2"),
+       url("../src/fonts/markazi-text-regular.woff") format("woff"),
+       url("../src/fonts/markazi-text-regular.ttf") format("truetype"); 
+  font-weight: 400;
+  font-style: normal;
+}
+
+/* Karla
+Lead text! Use this for descriptive items to catch attention!
+e.g. home page or CTA (Call to action) – Medium 18pt
+
+SECTION TITLE! UPPERCASE – 20PT EXTRA BOLD
+
+This Weeks Specials! Section Categories – 16pt Extra Bold
+
+Card Title – 18 pt Bold
+
+Paragraph text – Regular 16pt 1.5 line height
+Max 65 characters per line
+
+Highlight text e.g. price – Medium 16pt */
+
+/* Lead text, Highlight text - Karla Medium*/
+@font-face {
+  font-family: "Karla";
+  src: url("../src/fonts/karla-medium.woff2") format("woff2"),
+       url("../src/fonts/karla-medium.woff") format("woff"),
+       url("../src/fonts/karla-medium.ttf") format("truetype");
+  font-weight: 500;
+  font-style: normal;
+}
+
+/* Section title (Extra bold) */
+@font-face {
+  font-family: "Karla";
+  src: url("../src/fonts/karla-extra-bold.woff2") format("woff2"),
+       url("../src/fonts/karla-extra-bold.woff") format("woff"),
+       url("../src/fonts/karla-extra-bold.ttf") format("truetype");
+  font-weight: 800;
+  font-style: normal;
+}
+
+/* This week specials, Card title – Bold */
+@font-face {
+  font-family: "Karla";
+  src: url("../src/fonts/karla-bold.woff2") format("woff2"),
+       url("../src/fonts/karla-bold.woff") format("woff"),
+       url("../src/fonts/karla-bold.ttf") format("truetype");
+  font-weight: 700;
+  font-style: normal;
+}
+
+/* Paragraph text – Regular */
+@font-face {
+  font-family: "Karla";
+  src: url("../src/fonts/karla-regular.woff2") format("woff2"),
+       url("../src/fonts/karla-regular.woff") format("woff"),
+       url("../src/fonts/karla-regular.ttf") format("truetype");
+  font-weight: 400;
+  font-style: normal;
+}
+
 body {
   margin: 0;
-  font-family: -apple-system, BlinkMacSystemFont, 'Segoe UI', 'Roboto', 'Oxygen',
-    'Ubuntu', 'Cantarell', 'Fira Sans', 'Droid Sans', 'Helvetica Neue',
-    sans-serif;
+  padding: 0;
   -webkit-font-smoothing: antialiased;
   -moz-osx-font-smoothing: grayscale;
 }
 
-code {
-  font-family: source-code-pro, Menlo, Monaco, Consolas, 'Courier New',
-    monospace;
+.container {
+  margin: 0 auto;
+  max-width: 1020px;
 }
+
+/* Header */
+.header {
+  padding: 50px 0;
+}
+
+.header__menu {
+  display: flex;
+  flex-direction: row;
+  justify-content: space-between;
+  font-family: "Karla";
+  font-weight: 500;
+  font-size: 20px;
+}
+
+.header__logo {
+  width: 230px;
+    display: inline-block;
+    padding-bottom: 5px;
+}
+
+.header__menu-list {
+  display: flex;
+  flex-direction: row;
+  justify-content: space-between;
+  list-style-type: none;
+}
+
+.header__menu-list__item {
+  padding: 0 20px;
+  font-size: 20px;
+  text-transform: uppercase;
+}
+
+/* Intro */
+
+.intro__bgr {
+  background-color: #495E57;
+}
+
+.intro {
+  display: flex;
+  flex-direction: row;
+  justify-content: space-between;
+}
+
+.intro__left-part {
+  padding-left: 62px;
+}
+
+.intro__h1 {
+  color: #F4F4F4;
+  font-family: "Markazi Text";
+  font-size: 64px;
+  font-style: normal;
+  font-weight: 600;
+  line-height: normal;
+  margin: 60px 0 0;
+}
+
+.intro__h2 {
+  color: #FFF;
+  font-family: Markazi Text;
+  font-size: 40px;
+  font-style: normal;
+  font-weight: 600;
+  line-height: normal;
+  margin: 0;
+}
+
+.intro__text {
+  color: #FFF;
+  font-family: Karla;
+  font-size: 16px;
+  font-style: normal;
+  font-weight: 400;
+  line-height: normal;
+  margin-top: 20px;
+  width: 310px;
+}
+
+.intro__btn {
+  width: 310px;
+  height: 70px;
+  flex-shrink: 0;
+  border-radius: 16px;
+  border: none;
+  background: #F4CE14;
+  color: #FFF;
+  font-family: "Karla";
+  font-size: 20px;
+  font-style: normal;
+  font-weight: 800;
+  line-height: normal;
+  margin: 80px 0;
+}
+
+.intro__img {
+  border-radius: 16px;
+  width: 291px;
+  height: 360px;
+  margin-top: 65px;
+}
+
+/* Specials */
+
+.specials {
+  margin-bottom: 75px;
+}
+
+.specials__heading-part {
+  display: flex;
+  flex-direction: row;
+  justify-content: space-between;
+  margin-top: 30px;
+}
+
+.specials__h2 {
+  color: #333;
+  font-family: "Markazi Text";
+  font-size: 64px;
+  font-style: normal;
+  font-weight: 600;
+  line-height: normal;
+  margin: 0;
+}
+
+.specials__btn {
+  width: 310px;
+  height: 70px;
+  flex-shrink: 0;
+  border-radius: 16px;
+  border: none;
+  background: #F4CE14;
+  color: #FFF;
+  font-family: "Karla";
+  font-size: 20px;
+  font-style: normal;
+  font-weight: 800;
+  line-height: normal;
+}
+
+.specials__cards {
+  margin-top: 35px;
+  display: flex;
+  flex-direction: row;
+  justify-content: space-between;
+}
+
+.specials__card {
+  width: 300px;
+  display: flex;
+  flex-direction: column;
+  background-color: #FBDABB;
+  border-radius: 16px;
+}
+
+.specials__card__img {
+  height: 200px;
+  border-radius: 16px 16px 0 0;
+}
+
+.specials__card__heading__part {
+  display: flex;
+  flex-direction: row;
+  justify-content: space-between;
+  margin: 35px 20px 20px;
+}
+
+.specials__card__h3 {
+  color: #495E57;
+  font-family: "Karla";
+  font-size: 18px;
+  font-style: normal;
+  font-weight: 700;
+  line-height: normal;
+  margin: 0;
+}
+
+.specials__card__price {
+  color: #EE9972;
+  font-family: "Karla";
+  font-size: 16px;
+  font-style: normal;
+  font-weight: 500;
+  line-height: normal;
+  margin: 0;
+}
+
+.specials__card__text {
+  color: #000;
+  font-family: "Karla";
+  font-size: 16px;
+  font-style: normal;
+  font-weight: 400;
+  line-height: normal;
+  padding: 20px;
+  margin: 0;
+}
+
+.specials__card__link {
+  color: #495E57;
+  font-family: "Karla";
+  font-size: 16px;
+  font-style: normal;
+  font-weight: 500;
+  line-height: normal;
+  margin: 26px 20px 45px;
+}
+
+/* Testimonials */
+
+.testimonials {
+  background-color: #EE9972;
+  padding: 15px 0 75px;
+}
+
+.testimonials__cards {
+  display: flex;
+  flex-direction: row;
+  justify-content: space-around;
+}
+
+.testimonials_h2 {
+  color: #FBDABB;
+  font-family: "Markazi Text";
+  font-size: 64px;
+  font-style: normal;
+  font-weight: 600;
+  line-height: normal;
+  text-align: center;
+  margin: 10px 0 30px;
+}
+
+.testimonials__card {
+  background-color: #fff;
+  border-radius: 16px;
+  width: 170px;
+  display: flex;
+  flex-direction: column;
+  justify-content: space-between;
+  align-items: center;
+  padding: 30px;
+}
+
+.testimonials__card__img {
+  width: 120px;
+  height: 120px;
+  border-radius: 50%;
+}
+
+.testimonials__card__name {
+  color: #000;
+  font-family: "Karla";
+  font-size: 20px;
+  font-style: normal;
+  font-weight: 800;
+  line-height: normal;
+  margin: 15px 0;
+}
+
+.testimonials__card__text {
+  color: #000;
+  font-family: "Karla";
+  font-size: 16px;
+  font-style: normal;
+  font-weight: 400;
+  line-height: normal;
+  text-align: center;
+  margin-top: 0;
+}
+
+/* About */
+
+.about__part {
+  display: flex;
+  flex-direction: row;
+  justify-content: space-between;
+  margin-bottom: 150px;
+}
+
+.about__h2 {
+  color: black;
+  font-family: Markazi Text;
+  font-size: 64px;
+  font-style: normal;
+  font-weight: 600;
+  line-height: normal;
+  margin-bottom: 0;
+}
+
+.about__h3 {
+  color: #EE9972;
+  font-family: Markazi Text;
+  font-size: 40px;
+  font-style: normal;
+  font-weight: 600;
+  line-height: normal;
+  margin: 0;
+}
+
+.about__text {
+  color: #333;
+  font-family: Karla;
+  font-size: 16px;
+  font-style: normal;
+  font-weight: 400;
+  line-height: normal;
+  width: 420px;
+}
+
+.about__part__2 {
+  position: relative;
+}
+
+.about__img_1 {
+  width: 277px;
+  height: 335px;
+  object-fit: cover;
+  border-radius: 16px;
+  position: absolute;
+  top: 0;
+  right: 130px;
+}
+
+.about__img_2 {
+  width: 277px;
+  height: 335px;
+  object-fit: cover;
+  border-radius: 16px;
+  position: absolute;
+  right: 35px;
+  top: -64px;
+}
+
+/* Footer */
+
+.footer {
+  background-color: #495E57;
+}
+
+.footer__nav {
+  display: flex;
+  flex-direction: row;
+  padding: 77px 0 30px;
+}
+
+.footer__logo {
+  display: inline-block;
+  align-self: flex-start;
+  padding: 20px;
+}
+
+.footer__nav__list {
+  list-style-type: none;
+  padding-right: 110px;
+}
+
+.footer__nav__heading {
+  color: #F4CE14;
+  font-family: "Karla";
+  font-size: 20px;
+  font-style: normal;
+  font-weight: 800;
+  line-height: normal;
+  padding-bottom: 15px;
+}
+
+.footer__nav__item {
+  color: #fff;
+  font-family: "Karla";
+  font-size: 18px;
+  font-style: normal;
+  font-weight: 500;
+  line-height: normal;
+  padding-bottom: 5px;
+}
+
+.footer__nav__item_highlighted {
+  color: #EE9972;
+}
+
+/* Tablet styles */
+
+@media screen and (max-width: 1024px){
+  .container {
+    max-width: 900px;
+  }
+
+  .header__menu-list__item {
+    padding: 0 10px;
+    font-size: 20px;
+  }
+  .specials__card {
+    width: 280px;
+  }
+
+  .specials__card__img {
+    height: 186px;
+  }
+
+  .testimonials__card {
+    width: 145px;
+  }
+}
+
+@media screen and (max-width: 768px) {
+  .container {
+    max-width: 690px;
+  }
+
+  .header__logo {
+    width: 150px;
+  }
+
+  .header__menu-list__item {
+    padding: 0 8px;
+    font-size: 16px;
+  }
+
+  .intro__left-part {
+    padding-left: 30px;
+  }
+
+  .intro__h1,
+  .specials__h2,
+  .about__h2 {
+    font-size: 50px;
+  }
+
+  .intro__img {
+    width: 250px;
+    height: 310px;
+    margin-top: 86px;
+  }
+
+  .specials__card {
+    width: 220px;
+
+  }
+
+  .specials__card__img {
+      height: 150px;
+  }
+
+  .testimonials__card {
+    width: 100px;
+  }
+
+  .about__img_1 {
+    display: none;
+  }
+
+  .about__img_2 {
+    width: 230px;
+  }
+
+  .about__text {
+    width: 370px;
+  }
+
+  .footer__nav__list {
+    padding: 0 15px 0 0;
+  }
+}
+
+/* Mobile styles */
+
+@media screen and (max-width: 425px) {
+  .container {
+    max-width: 400px;
+  }
+
+  .header {
+    padding: 15px 0;
+  }
+
+  .header__menu {
+    flex-direction: column;
+    align-items: center;
+  }
+
+  .header__menu-list {
+    padding: 0;
+  }
+
+  .header__menu-list__item {
+    padding: 0 4px;
+    font-size: 14px;
+  }
+
+  .intro__h1,
+  .specials__h2,
+  testimonials_h2,
+  about__h2 {
+    font-size: 40px;
+  }
+
+  .intro__h2,
+  .about__h3 {
+    font-size: 32px;
+  }
+
+  .intro__img {
+    display: none;
+  }
+
+  .intro__btn {
+    margin: 40px 0;
+  }
+
+  .specials {
+    margin-bottom: 35px;
+  }
+
+  .specials__heading-part {
+    flex-direction: column;
+    align-items: center;
+  }
+
+  .specials__btn {
+    margin: 40px 0;
+  }
+
+  .specials__cards {
+    /* flex-wrap: wrap;
+    align-items: center; */
+    display: none;
+  }
+
+  /* .specials__card {
+    width: 190px;
+  } */
+
+  .testimonials__cards {
+    flex-wrap: wrap;
+  }
+  .testimonials__card {
+    width: 110px;
+    margin-bottom: 15px;
+  }
+
+  .testimonials__card__img {
+    width: 100px;
+    height: 100px;
+  }
+  .about__part {
+  margin-bottom: 35px;
+  }
+
+  .about__img_2 {
+    display: none;
+  }
+
+  .footer__nav {
+    flex-direction: column;
+    /* align-items: center; */
+    padding: 30px 0 30px;
+  }
+
+  .footer__nav__list {
+    padding: 0;
+    margin-left: 25px;
+  }
+}
+
+@media screen and (max-width: 375px) {
+  .container {
+    max-width: 350px;
+  }
+
+  .header__menu-list__item {
+    font-size: 12px;
+  }
+
+  .about__text {
+    width: 100%;
+  }
+}
+
+@media screen and (max-width: 320px) {
+  .container {
+    max-width: 300px;
+  }
+
+  .header__menu-list__item {
+    font-size: 10px;
+  }
+
+  .intro__left-part {
+    padding: 0;
+  }
+
+  .intro__text {
+    width: 100%;
+  }
+
+  .intro__btn,
+  .specials__btn {
+    width: 280px;
+  }
+
+  .testimonials__card {
+    width: 80px;
+  }
+
+  .testimonials__card__img {
+    width: 60px;
+    height: 60px;
+  }
+}
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
