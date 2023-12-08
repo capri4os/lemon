@@ -4,7 +4,7 @@ import marioadrian from "../images/mario-and-adrian.jpg";
 
 const About = () => {
     return (
-        <section className="about container">
+        <section className="about container" id="about">
             <h2 className="about__h2">Little Lemon</h2>
             <div className="about__part">
                 <div className="about__part__1"><h3 className="about__h3">Chicago</h3>

@@ -1,14 +1,15 @@
 import React from "react";
+import { Link } from "react-router-dom";
 import salad from "../images/greek-salad.jpg";
 import brushetta from "../images/bruchetta.svg";
 import dessert from "../images/lemon-dessert.jpg";
 
 const Specials = () => {
     return (
-        <section className="specials container">
+        <section className="specials container" id="menu">
             <div className="specials__heading-part">
                 <h2 className="specials__h2">Specials</h2>
-                <button className="specials__btn">Online Menu</button>
+                <Link to="/delivery"><button className="specials__btn">Online Menu</button></Link>
             </div>
             <div className="specials__cards">
                 <div className="specials__card">
