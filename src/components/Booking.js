@@ -1,12 +1,16 @@
 import React from "react";
-import Nav from "./Nav";
+import Header from "./Header";
+import Form from "./Form";
+import Footer from "./Footer";
 
 const Booking = () => {
     return (
-        <div className="container">
-            <Nav />
-            <h1 className="booking-table">Booking a Table</h1>
-        </div>
+        <>
+            <Header />
+            <div class="container"><h1 className="booking-table">Booking a Table</h1>
+                <Form /></div>
+            <Footer />
+        </>
     )
 };
 

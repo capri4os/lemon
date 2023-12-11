@@ -1,12 +1,14 @@
 import React from "react";
-import Nav from "./Nav";
+import Header from "./Header";
+import Footer from "./Footer";
 
 const Delivery = () => {
     return (
-        <div className="container">
-            <Nav />
+        <>
+            <Header />
             <h1 className="booking-table">Order Online</h1>
-        </div>
+            <Footer />
+        </>
     )
 };
 
