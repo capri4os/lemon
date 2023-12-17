@@ -1,18 +1,26 @@
 import React from "react";
 import { useState } from "react";
 
-const Form = () => {
-    const [date, setDate] = useState("");
-    const [time, setTime] = useState("");
-    const [guests, setGuests] = useState("");
-    const [occasion, setOccasion] = useState("");
+const Form = (props) => {
+    const [form, setForm] = useState(
+        {
+            date: "",
+            time: "",
+            guests: "",
+            occasion: ""
+        }
+    );
 
     function handleSubmit(e) {
         e.preventDefault();
-        setDate("");
-        setTime("");
-        setGuests("1");
-        setOccasion("");
+        setForm(
+            {
+                date: "",
+                time: "",
+                guests: "",
+                occasion: ""
+            }
+        )
     }
 
     return (
@@ -22,21 +30,28 @@ const Form = () => {
                 id="date"
                 type="date"
                 name="date"
-                value={date}
-                onChange={(e) => setDate(e.target.value)}
-            />
+                value={form.date}
+                onChange={(e) => ({
+                    ...form,
+                    date: e.target.value
+                })
+                } />
             <label htmlFor="time">Choose Time</label>
             <select
                 id="time"
                 type="text"
                 name="time"
-                value={time}
-                onChange={(e) => setTime(e.target.value)}>
-                <option>17:00</option>
-                <option>18:00</option>
-                <option>19:00</option>
-                <option>20:00</option>
-                <option>21:00</option>
+                value={form.time}
+                onChange={(e) => ({
+                    ...form,
+                    time: e.target.value
+                })
+                }>
+                {props.availableTimes.map((timeObj, index) => (
+                    <option key={index} value={timeObj.time}>
+                        {timeObj.time}
+                    </option>
+                ))}
             </select>
             <label htmlFor="guests">Number of Guests</label>
             <input
@@ -46,16 +61,22 @@ const Form = () => {
                 min="1"
                 max="10"
                 name="guests"
-                value={guests}
-                onChange={(e) => setGuests(e.target.value)}
+                value={form.guests}
+                onChange={(e) => ({
+                    ...form,
+                    guests: e.target.value
+                })}
             />
             <label htmlFor="occasion">Occasion</label>
             <select
                 id="occasion"
                 type="text"
                 name="occasion"
-                value={occasion}
-                onChange={(e) => setOccasion(e.target.value)}>
+                value={form.occasion}
+                onChange={(e) => ({
+                    ...form,
+                    occasion: e.target.value
+                })}>
                 <option>Birthday</option>
                 <option>Anniversary</option>
             </select>

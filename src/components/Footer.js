@@ -7,7 +7,7 @@ const Footer = () => {
     return (
         <footer className="footer">
             <nav className="footer__nav container">
-                <img className="footer__logo" src={logo}></img>
+                <img className="footer__logo" src={logo} alt="Little Lemon Logo"></img>
                 <ul className="footer__nav__list">
                     <li className="footer__nav__heading">Doormat Navigation</li>
                     <Link to="/"><li className="footer__nav__item">Home</li></Link>
