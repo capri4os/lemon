@@ -1,37 +1,46 @@
-import React, { useReducer } from "react";
+import React, { useEffect, useReducer, useState } from "react";
 import Header from "./Header";
 import Form from "./Form";
 import Footer from "./Footer";
 
-const reducer = (availableTimes, updateTimes) => {
-    if (updateTimes.type === "") return {};
-    return availableTimes;
-}
+const timeReducer = (availableTimes, action) => {
+    switch (action.type) {
+        case "updatetime":
+            return action.payload;
+        default:
+            return availableTimes;
+    }
+};
 
 const Booking = () => {
-
     const initializeTimes =
         [
-            { time: '17:00', status: 'available' },
-            { time: '18:00', status: 'available' },
-            { time: '19:00', status: 'available' },
-            { time: '20:00', status: 'available' },
-            { time: '21:00', status: 'available' },
+            { time: "17:00", status: "available" },
+            { time: "18:00", status: "available" },
+            { time: "19:00", status: "available" },
+            { time: "20:00", status: "unavailable" },
+            { time: "21:00", status: "available" },
         ];
 
-    const [availableTimes, dispatch] = useReducer(reducer, initializeTimes);
+    const [availableTimes, dispatch] = useReducer(timeReducer, initializeTimes);
+    const [currentDate, setCurrentDate] = useState(new Date());
 
-    const updateTimes = () => {
-        return (
-            { availableTimes }
-        );
-    };//will handle the state change
+    useEffect(() => {
+        const updateTimes = () => {
+            const updatedTimes = initializeTimes.map(timeSlot => ({
+                ...timeSlot,
+                status: timeSlot.time.startsWith(currentDate.getHours().toString()) ? "available" : "unavailable"
+            }));
+            dispatch({ type: "updatetime", payload: updatedTimes });
+        };
+        updateTimes();
+    }, [currentDate]);
 
     return (
         <>
             <Header />
-            <div class="container"><h1 className="booking-table">Booking a Table</h1>
-                <Form availableTimes={availableTimes} /></div>
+            <div className="container"><h1 className="booking__heading">Booking a Table</h1>
+                <Form availableTimes={availableTimes} updateTimes={dispatch} /></div>
             <Footer />
         </>
     )
