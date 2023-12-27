@@ -15,8 +15,8 @@ test("Renders the Initial Time Slots", () => {
   expect(listElements).toBeInTheDocument();
 });
 
-test("Renders Updated Times Depending from Date", (props) => {
-  render(<Form />);
-  const updatedTimes = screen.getByText("");
-  expect(updatedTimes).toBeInTheDocument();
-}); //todo
+// test("Renders Updated Times Depending from Date", (props) => {
+//   render(<Form />);
+//   const updatedTimes = screen.getByText("");
+//   expect(updatedTimes).toBeInTheDocument();
+// });

@@ -36,11 +36,16 @@ const Booking = () => {
         updateTimes();
     }, [currentDate]);
 
+    // const submitForm = () => {
+    //     submitAPI(formData); // If the submitAPI(formData) API call returns true, navigate to the booking confirmed page.
+    // }
+
     return (
         <>
             <Header />
             <div className="container"><h1 className="booking__heading">Booking a Table</h1>
                 <Form availableTimes={availableTimes} updateTimes={dispatch} /></div>
+            {/* <Form availableTimes={availableTimes} updateTimes={dispatch} submitForm={submitForm}/></div> */}
             <Footer />
         </>
     )

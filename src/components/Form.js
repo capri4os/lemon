@@ -1,5 +1,6 @@
 import React from "react";
-import { useState } from "react";
+import { useState, useEffect } from "react";
+import { HashLink as Link } from "react-router-hash-link";
 
 const Form = (props) => {
     const [form, setForm] = useState(
@@ -10,6 +11,14 @@ const Form = (props) => {
             occasion: ""
         }
     );
+
+    const [isValid, setIsValid] = useState(false);
+
+    useEffect(() => {
+        const formValues = Object.values(form);
+        const allFieldsFilled = formValues.every(value => value !== "");
+        setIsValid(allFieldsFilled);
+    }, [form]);
 
     const handleDateChange = (e) => {
         setForm({
@@ -60,7 +69,8 @@ const Form = (props) => {
                 type="date"
                 name="date"
                 value={form.date}
-                onChange={handleDateChange} />
+                onChange={handleDateChange}
+                required />
             <label htmlFor="time" className="booking__form__label">Choose Time</label>
             <select
                 className="booking__form__select"
@@ -68,7 +78,8 @@ const Form = (props) => {
                 type="text"
                 name="time"
                 value={form.time}
-                onChange={handleTimeChange}>
+                onChange={handleTimeChange}
+                required>
                 {props.availableTimes.map((timeObj, index) => (
                     <option key={index} value={timeObj.time}>
                         {timeObj.time}
@@ -80,12 +91,13 @@ const Form = (props) => {
                 className="booking__form__input"
                 id="guests"
                 type="number"
-                placeholder="1"
+                placeholder="2"
                 min="1"
                 max="10"
                 name="guests"
                 value={form.guests}
                 onChange={handleGuestsChange}
+                required minLength={1} maxLength={10}
             />
             <label htmlFor="occasion" className="booking__form__label">Occasion</label>
             <select
@@ -94,13 +106,19 @@ const Form = (props) => {
                 type="text"
                 name="occasion"
                 value={form.occasion}
-                onChange={handleOccasionChange}>
-                <option>Birthday</option>
+                onChange={handleOccasionChange}
+                required>
+                <option>Date</option>
+                <option >Birthday</option>
                 <option>Anniversary</option>
             </select>
-            <button
-                type="submit" className="booking__form__btn"
-            >Make Your Reservation</button>
+            <Link to="/confirmed-booking">
+                <button
+                    type="submit"
+                    className="booking__form__btn"
+                    disabled={!isValid}
+                >Make Your Reservation</button>
+            </Link>
         </form>
     )
 };

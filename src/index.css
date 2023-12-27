@@ -93,6 +93,10 @@ a {
   text-decoration: none;
 }
 
+input:focus:invalid {
+  border: 2px solid red;
+}
+
 /* Header */
 .header {
   padding: 50px 0;
@@ -532,6 +536,7 @@ a {
   border-radius: 16px;
   border: 1px solid #495E57;
   margin-bottom: 7px;
+  font-family: "Karla";
   font-size: 16px;
   color: #333;
 }
@@ -548,6 +553,23 @@ a {
   font-style: normal;
   font-weight: 800;
   line-height: normal;
+}
+
+.booking__form__btn:disabled {
+  color: #fff;
+  background-color: lightgray;
+}
+
+.confirmation__heading {
+  text-align: center;
+  color: #333;
+    font-family: "Markazi Text";
+    font-size: 64px;
+    font-style: normal;
+    font-weight: 600;
+    line-height: normal;
+    margin: 0 auto;
+    padding-bottom: 150px;
 }
 
 /* Tablet styles */
@@ -779,22 +801,3 @@ a {
     height: 60px;
   }
 }
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
