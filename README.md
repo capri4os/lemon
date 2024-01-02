@@ -1,3 +1,8 @@
+#For Coursera Peer-graded Assignment:
+There's no API form submission, because provided API doesn't exist.
+There's no unit tests, because I've met mistakes during testing which I couldn't resolve.
+There's no functions with choosing time slots, because I didn't catch the topic of reducer.
+
 # Getting Started with Create React App
 
 This project was bootstrapped with [Create React App](https://github.com/facebook/create-react-app).
