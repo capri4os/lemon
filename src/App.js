@@ -7,15 +7,15 @@ import ConfirmedBooking from "./components/ConfirmedBooking";
 
 function App() {
   return (
-    <>
+    <div>
       <Routes>
         <Route path="/" element={<Homepage />} />
         <Route path="/booking" element={<Booking />} />
         <Route path="/delivery" element={<Delivery />} />
         <Route path="/confirmed-booking" element={<ConfirmedBooking />} />
       </Routes>
-    </>
+    </div>
   )
-}
+};
 
 export default App;

@@ -1,8 +1,8 @@
-import React from "react";
-import { useState, useEffect } from "react";
+import React, { useState, useEffect } from "react";
 import { HashLink as Link } from "react-router-hash-link";
 
 const Form = (props) => {
+
     const [form, setForm] = useState(
         {
             date: "",
@@ -61,7 +61,7 @@ const Form = (props) => {
     };
 
     return (
-        <form onSubmit={handleSubmit} className="booking__form">
+        <form onSubmit={handleSubmit} className="booking__form" method="post">
             <label htmlFor="date" className="booking__form__label">Choose Date</label>
             <input
                 className="booking__form__input"
@@ -81,7 +81,9 @@ const Form = (props) => {
                 onChange={handleTimeChange}
                 required>
                 {props.availableTimes.map((timeObj, index) => (
-                    <option key={index} value={timeObj.time}>
+                    <option
+                        key={index}
+                        value={timeObj.time}>
                         {timeObj.time}
                     </option>
                 ))}
@@ -97,7 +99,7 @@ const Form = (props) => {
                 name="guests"
                 value={form.guests}
                 onChange={handleGuestsChange}
-                required minLength={1} maxLength={10}
+                required
             />
             <label htmlFor="occasion" className="booking__form__label">Occasion</label>
             <select

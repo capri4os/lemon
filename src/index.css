@@ -317,7 +317,7 @@ input:focus:invalid {
   margin: 0;
 }
 
-.specials__card__link {
+.specials__card__btn {
   color: #495E57;
   font-family: "Karla";
   font-size: 16px;
@@ -325,6 +325,9 @@ input:focus:invalid {
   font-weight: 500;
   line-height: normal;
   margin: 26px 20px 45px;
+  text-align: left;
+  border: none;
+  background: none;
 }
 
 /* Testimonials */
@@ -357,7 +360,7 @@ input:focus:invalid {
   width: 170px;
   display: flex;
   flex-direction: column;
-  justify-content: space-between;
+  justify-content: flex-start;
   align-items: center;
   padding: 30px;
 }
@@ -366,6 +369,7 @@ input:focus:invalid {
   width: 120px;
   height: 120px;
   border-radius: 50%;
+  margin-bottom: 20px;
 }
 
 .testimonials__card__name {

@@ -12,6 +12,6 @@ const ConfirmedBooking = () => {
             <Footer />
         </>
     )
-}
+};
 
 export default ConfirmedBooking;

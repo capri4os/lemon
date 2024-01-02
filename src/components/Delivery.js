@@ -6,7 +6,9 @@ const Delivery = () => {
     return (
         <>
             <Header />
-            <h1 className="booking-table container">Order Online</h1>
+            <div className="container">
+                <h1 className="booking-table container">Order Online</h1>
+            </div>
             <Footer />
         </>
     )

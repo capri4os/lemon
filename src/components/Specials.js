@@ -1,5 +1,5 @@
 import React from "react";
-import { Link } from "react-router-dom";
+import { HashLink as Link } from "react-router-hash-link";
 import salad from "../images/greek-salad.jpg";
 import brushetta from "../images/bruchetta.svg";
 import dessert from "../images/lemon-dessert.jpg";
@@ -13,31 +13,31 @@ const Specials = () => {
             </div>
             <div className="specials__cards">
                 <div className="specials__card">
-                    <img className="specials__card__img" src={salad}></img>
+                    <img className="specials__card__img" src={salad} alt="Greek Salad"></img>
                     <div className="specials__card__heading__part">
                         <h3 className="specials__card__h3">Greek Salad</h3>
                         <p className="specials__card__price">$12.99</p>
                     </div>
                     <p className="specials__card__text">Lorem ipsum dolor sit amet, consectetur adipiscing elit, sed do eiusmod tempor incididunt ut labore et dolore magna aliqua. Ut enim ad minim veniam, quis nostrud exercitation ullamco laboris nisi ut aliquip ex ea commodo consequat.</p>
-                    <a className="specials__card__link">Order Delivery</a>
+                    <button className="specials__card__btn">Order Delivery</button>
                 </div>
                 <div className="specials__card">
-                    <img className="specials__card__img" src={brushetta}></img>
+                    <img className="specials__card__img" src={brushetta} alt="Brushetta"></img>
                     <div className="specials__card__heading__part">
                         <h3 className="specials__card__h3">Brushetta</h3>
                         <p className="specials__card__price">$7.99</p>
                     </div>
                     <p className="specials__card__text">Lorem ipsum dolor sit amet, consectetur adipiscing elit, sed do eiusmod tempor incididunt ut labore et dolore magna aliqua. Ut enim ad minim veniam, quis nostrud exercitation ullamco laboris nisi ut aliquip ex ea commodo consequat.</p>
-                    <a className="specials__card__link">Order Delivery</a>
+                    <button className="specials__card__btn">Order Delivery</button>
                 </div>
                 <div className="specials__card">
-                    <img className="specials__card__img" src={dessert}></img>
+                    <img className="specials__card__img" src={dessert} alt="Lemon Pie"></img>
                     <div className="specials__card__heading__part">
                         <h3 className="specials__card__h3">Lemon Pie</h3>
                         <p className="specials__card__price">$10.99</p>
                     </div>
                     <p className="specials__card__text">Lorem ipsum dolor sit amet, consectetur adipiscing elit, sed do eiusmod tempor incididunt ut labore et dolore magna aliqua. Ut enim ad minim veniam, quis nostrud exercitation ullamco laboris nisi ut aliquip ex ea commodo consequat.</p>
-                    <a className="specials__card__link">Order Delivery</a>
+                    <button className="specials__card__btn">Order Delivery</button>
                 </div>
             </div>
         </section>

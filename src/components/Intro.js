@@ -1,5 +1,5 @@
 import React from "react";
-import { Link } from "react-router-dom";
+import { HashLink as Link } from "react-router-hash-link";
 import image from "../images/intro-img.jpg";
 
 const Intro = () => {
@@ -13,7 +13,7 @@ const Intro = () => {
                     <Link to="/booking"><button className="intro__btn">Reserve a Table</button></Link>
                 </div>
                 <div>
-                    <img src={image} className="intro__img"></img>
+                    <img src={image} className="intro__img" alt="Welcome to Little Lemon Restraunt"></img>
                 </div>
             </section >
         </div>
