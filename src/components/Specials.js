@@ -19,7 +19,10 @@ const Specials = () => {
                         <p className="specials__card__price">$12.99</p>
                     </div>
                     <p className="specials__card__text">Lorem ipsum dolor sit amet, consectetur adipiscing elit, sed do eiusmod tempor incididunt ut labore et dolore magna aliqua. Ut enim ad minim veniam, quis nostrud exercitation ullamco laboris nisi ut aliquip ex ea commodo consequat.</p>
-                    <button className="specials__card__btn">Order Delivery</button>
+                    <button
+                        className="specials__card__btn"
+                        aria-label="Order Delivery"
+                    >Order Delivery</button>
                 </div>
                 <div className="specials__card">
                     <img className="specials__card__img" src={brushetta} alt="Brushetta"></img>
@@ -28,7 +31,10 @@ const Specials = () => {
                         <p className="specials__card__price">$7.99</p>
                     </div>
                     <p className="specials__card__text">Lorem ipsum dolor sit amet, consectetur adipiscing elit, sed do eiusmod tempor incididunt ut labore et dolore magna aliqua. Ut enim ad minim veniam, quis nostrud exercitation ullamco laboris nisi ut aliquip ex ea commodo consequat.</p>
-                    <button className="specials__card__btn">Order Delivery</button>
+                    <button
+                        className="specials__card__btn"
+                        aria-label="Order Delivery"
+                    >Order Delivery</button>
                 </div>
                 <div className="specials__card">
                     <img className="specials__card__img" src={dessert} alt="Lemon Pie"></img>
@@ -37,7 +43,10 @@ const Specials = () => {
                         <p className="specials__card__price">$10.99</p>
                     </div>
                     <p className="specials__card__text">Lorem ipsum dolor sit amet, consectetur adipiscing elit, sed do eiusmod tempor incididunt ut labore et dolore magna aliqua. Ut enim ad minim veniam, quis nostrud exercitation ullamco laboris nisi ut aliquip ex ea commodo consequat.</p>
-                    <button className="specials__card__btn">Order Delivery</button>
+                    <button
+                        className="specials__card__btn"
+                        aria-label="Order Delivery"
+                    >Order Delivery</button>
                 </div>
             </div>
         </section>

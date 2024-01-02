@@ -119,6 +119,7 @@ const Form = (props) => {
                     type="submit"
                     className="booking__form__btn"
                     disabled={!isValid}
+                    aria-label="Make Your Reservation"
                 >Make Your Reservation</button>
             </Link>
         </form>
